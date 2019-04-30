@@ -58,8 +58,8 @@ class Setup extends \Prefab {
 	 * @param $db_type
 	 */
 	public function install($db_type) {
-		$f3 = \Base::instance();
-		$db_type = strtoupper($db_type);
+		$f3     = \Base::instance();
+		$db_type = strtoupper($db_type["PARAMS"]["type"]);
 		if( $db = Storage::instance()->get($db_type))
 			$f3->set('DB', $db);
 		else {

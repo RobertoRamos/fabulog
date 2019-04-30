@@ -58,6 +58,8 @@ $tmpl->extend('select','\Template\Tags\Select::render');
 \Assets::instance();
 
 $f3->config('app/routes.ini');
+// Solo Instalacion nueva
+//$f3->route('GET /install/@type', 'setup->install');
 
 ///////////////
 //  backend  //
